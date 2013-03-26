@@ -1,7 +1,7 @@
 EncodingDemo::Application.routes.draw do
   get "home/index"
-
   post "home/results"
+  post "home/get_cell"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
