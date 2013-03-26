@@ -1,0 +1,7 @@
+data:
+  type: mysql
+www:
+  type: ruby
+  approot: .
+
+
