@@ -1,5 +1,5 @@
 {
-    "push_branch": null, 
+    "push_branch": "direct", 
     "application": "enc1", 
     "version": "0.9.4", 
     "push_protocol": "git"
