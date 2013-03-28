@@ -7,7 +7,7 @@ group :development, :test do
 end
 
 group :production do
-  gem pg
+  gem 'pg'
 end
 
 gem 'multi_json', '1.5.1'
