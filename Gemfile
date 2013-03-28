@@ -15,8 +15,6 @@ gem 'thin'
 
 gem 'therubyracer'
 
-gem 'bootstrap-sass'
-
 gem 'simple_form'
 
 gem 'cells'
