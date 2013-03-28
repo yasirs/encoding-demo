@@ -2,7 +2,7 @@
 <p>These are the values returned from the form.</p>
 
 <% for k in @params.keys do %>
-  Key = <%= k %>, Value = <%= @params[k] %> <br/>
+  Key = <%= k %>, Value = <%= @params[k] %>, Value.inspect = <%= @params[k].inspect %> <br/>
 <% end %>
 
 <%= link_to "Go back", "index" %>

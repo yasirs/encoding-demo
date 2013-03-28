@@ -1,6 +1,6 @@
 {
-    "push_branch": "cell", 
-    "application": "enc2", 
+    "push_branch": "master", 
+    "application": "encm", 
     "version": "0.9.4", 
     "push_protocol": "git"
 }

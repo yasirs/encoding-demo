@@ -3,15 +3,26 @@
 <% end %>
 
 <h1>Encoding</h1>
-<p>This is a demo of string encoding in forms.</p>
 
-<%= form_tag( {:action => 'get_cell'}, {:multipart => true, :remote => true, :class => "form-horizontal", "data-type" => "html"}) do %>
-  <p>This will demonstrate the effect of using remotipart for file uploads on the encoding of delivered HTML.</p>
+<%= form_tag( {:action => 'get_cell'}, {:multipart => true, :remote => true, :class => "multipart", "data-type" => "html"}) do %>
+  <p>This will demonstrate the effect of using remotipart for file uploads on the encoding of delivered HTML.<br/>
+     If you do not upload any file and leave the filename blank (or if there is no multipart), the HTML is correctly encoded. However, if you upload a file, then the HTML encoding gets messed up.</p>
       <label for="flat_file">Upload any file</label>
       <%= file_field_tag "flat_file", :placeholder=> 'File input' %>
   <p><%= submit_tag "Get the Form" %></p>
 <% end %>
 
 
-<div id='for_partial'>
+<div id='partial_multipart'>
 </div>
+
+
+<%= form_tag( {:action => 'get_cell'}, {:remote => true, :class => "no_multipart", "data-type" => "html"}) do %>
+  <p>Here, there is no multipart, and the HTML is correctly encoded.</p>
+  <p><%= submit_tag "Get the Form" %></p>
+<% end %>
+
+
+<div id='partial_no_multipart'>
+</div>
+

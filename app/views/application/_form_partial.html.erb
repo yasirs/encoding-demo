@@ -5,27 +5,28 @@
 
     <% c1 ="'" %>
     <% c2='"' %>
-    Single Quotes </br>
-    <input type='hidden' name='single_c1' value='<%= h c1 %>'>
-    <input type='hidden' name='single_c2' value='<%= h c2 %>'>
-    hidden_field_tag </br>
-    <%= hidden_field_tag :tag_c1, c1 %>
-    <%= hidden_field_tag :tag_c2, c2 %>    
-    double quotes </br>
-    <input type='hidden' name='double_c1' value="<%= h c1 %>">
-    <input type='hidden' name='double_c2' value="<%= h c2 %>">
+  <p>
+    If I use single quotes to specify attributes: <br/>
+    <label>A single quote</label><input type='text' name='single_c1' value='<%= h c1 %>'> <br/>
+    <label>A double quote</label><input type='text' name='single_c2' value='<%= h c2 %>'> <br/>
+  </p>
 
-  <input type="hidden" name="double_single" value="<%= h(@single) %>">
-  <input type="hidden" name="double_double" value="<%= h(@double) %>">
-  <input type="hidden" name="double_tab" value="<%= h(@tab) %>">
+  <p>
+    If I use the text_field_tag <br/>
+    <label>A single quote</label><%= text_field_tag :tag_c1, c1 %> <br/>
+    <label>A double quote</label><%= text_field_tag :tag_c2, c2 %> <br/>   
+  </p>
+  <p>
+    If I use double quotes </br>
+    <label>A single quote</label><input type='text' name='double_c1' value="<%= h c1 %>">
+    <label>A double quote</label><input type='text' name='double_c2' value="<%= h c2 %>">
+  </p>
 
-
-  <input type='hidden' name='single_single' value='<%= h(@single) %>'>
-  <input type='hidden' name='single_double' value='<%= h(@double) %>'>
-  <input type='hidden' name='single_tab' value='<%= h(@tab) %>'>
-
-  <%= select_tag "select_1", options_for_select([["Tab","\t"],["Single Quote","'"],["Double Quote",'"']])%>
-  <%= select_tag "select_2", options_for_select([["Tab","\t"],["Single Quote","'"],["Double Quote",'"']])%>
+  <p><label>A select tag</label>
+    <%= select_tag "select_1", options_for_select([["Tab","\t"],["Single Quote","'"],["Double Quote",'"']])%>
+    <label>Another select tag</label>
+    <%= select_tag "select_2", options_for_select([["Tab","\t"],["Single Quote","'"],["Double Quote",'"']])%>
+  </p>
 
   <%= submit_tag "Submit" %>
 <% end %>
