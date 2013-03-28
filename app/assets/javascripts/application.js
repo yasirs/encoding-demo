@@ -15,5 +15,4 @@
 //= require jquery_ujs
 //= require jquery.remotipart
 //= require bootstrap
-//= require active_scaffold
 // require_tree .
