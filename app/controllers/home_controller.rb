@@ -11,7 +11,7 @@ class HomeController < ApplicationController
 
   def get_cell
     respond_to do |format|
-      format.html {render :partial => 'cell_partial'}
+      format.html {render :partial => 'form_partial'}
     end
 
   end
