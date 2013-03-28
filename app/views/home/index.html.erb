@@ -1,8 +1,20 @@
+<% content_for :head do %>
+  <%= javascript_include_tag "index" %>
+<% end %>
+
 <h1>Encoding</h1>
 <p>This is a demo of string encoding in forms.</p>
 
 <%= form_tag( {:action => 'get_cell'}, {:multipart => true, :remote => true, :class => "form-horizontal", "data-type" => "html"}) do %>
-  <% submit_tag "Get the Form" %>
+  <div class='control-group'>
+    <div class='control-label'>
+      <label for="flat_file">File</label>
+    </div>
+    <div class='controls'>
+      <%= file_field_tag "flat_file", :placeholder=> 'File input' %>
+    </div>
+  </div>
+  <%= submit_tag "Get the Form" %>
 <% end %>
 
 
