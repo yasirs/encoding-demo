@@ -6,6 +6,10 @@ group :development, :test do
   gem 'sqlite3'
 end
 
+group :production do
+  gem pg
+end
+
 gem 'multi_json', '1.5.1'
 
 gem 'thin'
