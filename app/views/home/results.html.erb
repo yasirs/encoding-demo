@@ -1,6 +1,8 @@
 <h1>Results</h1>
-<p>This is what we go from the form:</p>
+<p>These are the values returned from the form.</p>
 
 <% for k in @params.keys do %>
-  <p>Key = <%= k %>, Value = <%= @params[k] %></p>
+  Key = <%= k %>, Value = <%= @params[k] %> <br/>
 <% end %>
+
+<%= link_to "Go back", "index" %>

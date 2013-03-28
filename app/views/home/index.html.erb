@@ -6,17 +6,12 @@
 <p>This is a demo of string encoding in forms.</p>
 
 <%= form_tag( {:action => 'get_cell'}, {:multipart => true, :remote => true, :class => "form-horizontal", "data-type" => "html"}) do %>
-  <div class='control-group'>
-    <div class='control-label'>
-      <label for="flat_file">File</label>
-    </div>
-    <div class='controls'>
+  <p>This will demonstrate the effect of using remotipart for file uploads on the encoding of delivered HTML.</p>
+      <label for="flat_file">Upload any file</label>
       <%= file_field_tag "flat_file", :placeholder=> 'File input' %>
-    </div>
-  </div>
-  <%= submit_tag "Get the Form" %>
+  <p><%= submit_tag "Get the Form" %></p>
 <% end %>
 
 
-<div id='for_cell'>
+<div id='for_partial'>
 </div>
